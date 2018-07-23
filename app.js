@@ -2,6 +2,8 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
+const port = process.env.PORT || 3000;
+
 let app = express();
 
 // to keep the header different in a file and then include it in html
@@ -79,6 +81,6 @@ app.get('/bad', (req, res) => {
 });
 
 // this second arguement is optional.
-app.listen(3000, () => {
-  console.log('server started on port 3000');
+app.listen(port, () => {
+  console.log(`server started on port ${port}`);
 });
