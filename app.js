@@ -61,8 +61,8 @@ app.get('/', (request, response) => {
 // make home page route and render it.
 app.get('/', (req, res) => {
   res.render('index.hbs', {
-    title: 'this is the HOME PAGE',
-    info: 'this is some rendered text!',
+    title: 'this is the web-app made by HUNCHOA$H, a single page app made with Node.js and Express/Express template engine!',
+    info: 'still under construction...',
   });
 });
 
