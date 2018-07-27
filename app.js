@@ -53,7 +53,7 @@ app.get('/', (request, response) => {
 // make home page route and render it.
 app.get('/', (req, res) => {
   res.render('index.hbs', {
-    title: `Yo this is A$H, thank you for visiting my site though its gon' take some time to make it an actual goddnamn Web-Site`,
+    title: `Yo this is A$H, thank you for visiting my site though its gon' take some time to make it an actual goddnamn Web-Site.`,
     info: 'still under construction...',
   });
 });
