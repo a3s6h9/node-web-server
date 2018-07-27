@@ -25,14 +25,6 @@ app.use((req, res, next) => {
   next();
 });
 
-/* // maintanance middlewear
-app.use((req, res, next) => {
-  res.render('maintenance.hbs');
-}); */
-
-// use a middlewear to view our help.html page.
-app.use(express.static(__dirname + '/public'));
-
 // register a helper for didplaying year in hbs files.
 hbs.registerHelper('getCurrYear', () => {
   return new Date().getFullYear();
@@ -61,10 +53,18 @@ app.get('/', (request, response) => {
 // make home page route and render it.
 app.get('/', (req, res) => {
   res.render('index.hbs', {
-    title: 'this is the web-app made by HUNCHOA$H, a single page app made with Node.js and Express/Express template engine!',
+    title: `Yo this is A$H, thank you for visiting my site though its gon' take some time to make it an actual goddnamn Web-Site`,
     info: 'still under construction...',
   });
 });
+
+ // maintanance middlewear
+ app.use((req, res, next) => {
+  res.render('maintenance.hbs');
+});
+
+// use a middlewear to view our help.html page.
+app.use(express.static(__dirname + '/public'));
 
 // about page Route
 app.get('/about', (req, res) => {
