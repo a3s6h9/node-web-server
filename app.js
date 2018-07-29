@@ -41,10 +41,10 @@ app.get('/', (request, response) => {
 
  // send application/json data
     response.send({
-      name: 'Harshu',
+      name: 'Hailee',
       likes: [
         'HMOVIES',
-        'KARDASHIAN'
+        'KARDASHIANs'
       ]
     });
 });
